@@ -38,7 +38,7 @@ app.get('/duration', (req, res) => {
     const playlistID = req.query.playlistId;
     console.log(playlistID)
     if (!playlistID) {
-        return res.send({
+        return res.json({
             error: "You must provide an address"
         })
     }
@@ -79,8 +79,8 @@ app.get('/duration', (req, res) => {
         console.log(getVideoIds());
     }
     catch (err) {
-        res.send({
-            error: err
+        res.json({
+            error: err.message
         })
     }
 })
