@@ -25,6 +25,9 @@ playlistForm.addEventListener('submit', e => {
                 input.value = '';
             }
         })
+        .catch(err => {
+            console.log(err)
+        })
 
 })
 
