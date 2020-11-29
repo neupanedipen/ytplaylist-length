@@ -26,7 +26,7 @@ playlistForm.addEventListener('submit', e => {
             }
         })
         .catch(err => {
-            console.log(err)
+            messageTwo.textContent = err.message;
         })
 
 })
